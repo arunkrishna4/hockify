@@ -1,6 +1,5 @@
 package com.example.hockeyscoringapp;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 
@@ -10,28 +9,25 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class login_page extends AppCompatActivity {
+public class signup_page extends AppCompatActivity {
 
-    TextView sig;
 
+    TextView lo ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_login_page);
+        setContentView(R.layout.activity_signup_page);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
 
-        sig = findViewById(R.id.text_sign_up);
+        lo = findViewById(R.id.text_login);
 
-        sig.setOnClickListener(v -> {
-            Intent intent = new Intent(this, signup_page.class);
-            startActivity(intent);
+        lo.setOnClickListener(v -> {
+            finish();
         });
-
-
     }
 }
