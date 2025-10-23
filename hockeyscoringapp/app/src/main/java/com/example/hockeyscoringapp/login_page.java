@@ -2,6 +2,7 @@ package com.example.hockeyscoringapp;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -13,6 +14,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class login_page extends AppCompatActivity {
 
     TextView sig;
+    Button log;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +34,13 @@ public class login_page extends AppCompatActivity {
             startActivity(intent);
         });
 
+
+        log = findViewById(R.id.button_login);
+
+        log.setOnClickListener(v -> {
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+        });
 
     }
 }
