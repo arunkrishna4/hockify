@@ -12,11 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Hockeyscoringapp">
         <activity
+            android:name=".playerstats"
+            android:exported="false" />
+        <activity
+            android:name=".matchsummary"
+            android:exported="false" />
+        <activity
             android:name=".signup_page"
             android:exported="false"
-            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"
-        />
-
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
         <activity
             android:name=".login_page"
             android:exported="true"
